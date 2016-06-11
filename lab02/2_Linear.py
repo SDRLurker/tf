@@ -32,4 +32,5 @@ sess.run(init)
 for step in xrange(2001):
 	sess.run(train)
 	if step % 20 == 0:
-		print step, sess.run(cost), sess.run(W), sess.run(b)
+		print "%5s %10s %10s %10s" % ("step","cost","W","b")
+		print "%5d %10.4f %10.4f %10.4f" % (step, sess.run(cost), sess.run(W), sess.run(b))
